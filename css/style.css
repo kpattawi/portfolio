@@ -1,11 +1,11 @@
 body{
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 15px;
+    font-size: 14px;
     line-height: 1.5;
-    font: 15px/1.5 Arial, Helvetica, sans-serif;
+    font: 14px/1.5 Arial, Helvetica, sans-serif;
     padding:0;
     margin:0;
-    background-color: darkgrey;
+    background-color: rgb(121, 123, 128);
 }
 
 /* Global */
@@ -36,18 +36,18 @@ ul{
 
 /* Header */
 header{
-    background: darkslategray;
+    background: rgb(15, 49, 88);
     color: ghostwhite;
     padding-top: 30px;
     min-height: 70px;
-    border-bottom: #e8491d 3px solid;
+    border-bottom: #1dbfe8 3px solid;
 }
 
 header a{
     color: #fff;
     text-decoration: none;
     text-transform: uppercase;
-    font-size: 16px;
+    font-size: 14px;
 }
 
 header li{
@@ -70,54 +70,38 @@ header nav{
 }
 
 header .highlight, header .current a{
-    color:indianred;
+    color:#1dbfe8;
     font-weight: bold;
 }
 
 header a:hover{
-    color: indianred;
+    color: rgb(155, 38, 38);
     font-weight: bold;
 }
 
 /* Showcase */
 #showcase{
-    min-height: 400px;
-    background: url('../img/wave.jpg') no-repeat 0 -40px; 
+    min-height: 500px;
+    background: url('../img/blackbodysurf.jpg') no-repeat 0 -70px; 
+    background-size: cover;
     text-align: center;
     color: white;
 }
-
 #showcase h1{
-    margin-top: 100px;
+    margin-top: 60px;
     font-size: 55px;
+    text-shadow: 2px 2px 4px white;
     margin-bottom: 10px;
+    color: rgb(15, 49, 88);
 }
-
 #showcase p{
     font-size: 20px;
+    text-shadow: 2px 2px 4px white;
+    font-weight: bold;
+    color: rgb(15, 49, 88);
 }
 
-/* Newsletter */
-#newsletter{
-    padding: 15px;
-    color: #fff;
-    background: #35424a;
-}
 
-#newsletter h1{
-    float: left;
-}
-
-#newsletter form{
-    float: right;
-    margin-top: 15px;
-}
-
-#newsletter input[type="email"]{
-    padding: 4px;
-    height: 25px;
-    width: 250px;
-}
 
 /* Boxes */
 #boxes{
@@ -128,7 +112,7 @@ header a:hover{
     float: left;
     text-align: center;
     width: 30%;
-    padding: 10px;
+    padding: 1.5%;
 }
 
 #boxes .box img{
@@ -147,6 +131,12 @@ article#main-col{
     float: left;
     width: 65%;
 }
+article#main-col h1{
+    color: white;
+    text-align: center;
+    font-size: 28px;
+    font-weight: bold;
+}
 
 /* KalebShapes */
 ul#services li{
@@ -157,14 +147,49 @@ ul#services li{
     background: #e6e6e6;
 }
 
-footer{
-    padding: 20px;
-    margin-top: 20px;
-    color: white;
-    background-color: #e8491d;
-    text-align: center;
+/* Newsletter */
+#newsletter{
+    display: grid;
+    box-sizing: border-box;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 1em;
+    justify-items: center;
+    align-items: center;
 
+    color: #fff;
+    background: #35424a;
 }
+#newsletter img{
+    padding: 15px;
+    width: 50px;
+    height: auto;
+}
+#newsletter h1{
+    float: left;
+}
+#newsletter form{
+    float: right;
+    margin-top: 15px;
+}
+#newsletter input[type="email"]{
+    padding: 4px;
+    height: 25px;
+    width: 250px;
+}
+
+/* Footer */
+footer{
+    float: left;
+    width: 100%;
+    padding: 35px;
+    margin-top: 0px;
+    box-sizing: border-box;
+    color: white;
+    background-color: rgb(15, 49, 88);
+    text-align: center;
+    border-top: #1dbfe8 3px solid;
+}
+
 
 /* Media Queries */
 @media(max-width: 768px){
