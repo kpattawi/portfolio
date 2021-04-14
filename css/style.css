@@ -1,8 +1,8 @@
 body{
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 14px;
+    font-size: 16px;
     line-height: 1.5;
-    font: 14px/1.5 Arial, Helvetica, sans-serif;
+    font: 16px/1.5 Arial, Helvetica, sans-serif;
     padding:0;
     margin:0;
     background-color: rgb(121, 123, 128);
@@ -33,6 +33,13 @@ ul{
     margin-top: 10px;
     margin-bottom: 10px;
 }
+.light{
+    padding: 15px;
+    background: #e4e4e4;
+    color: rgb(15, 49, 88);
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
 
 /* Header */
 header{
@@ -47,7 +54,7 @@ header a{
     color: #fff;
     text-decoration: none;
     text-transform: uppercase;
-    font-size: 14px;
+    font-size: 16px;
 }
 
 header li{
@@ -86,6 +93,7 @@ header a:hover{
     background-size: cover;
     text-align: center;
     color: white;
+    border-bottom: #1dbfe8 3px solid;
 }
 #showcase h1{
     margin-top: 60px;
@@ -105,31 +113,29 @@ header a:hover{
 
 /* Boxes */
 #boxes{
-    margin-top: 20px;
+    margin: 30px;
+    padding: 1em;
+    display: grid;
+    box-sizing: border-box;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 3em;
+    justify-items: center;
+    align-items: center;
 }
 
 #boxes .box{
-    float: left;
     text-align: center;
-    width: 30%;
-    padding: 1.5%;
 }
 
 #boxes .box img{
     width: 90px;
 }
 
-/* Sidebar */
-aside#sidebar{
-    float: right;
-    width: 30%;
-    margin-top: 10px;
-}
-
 /* Main-col */
 article#main-col{
     float: left;
     width: 65%;
+    margin: 1em;
 }
 article#main-col h1{
     color: white;
@@ -138,7 +144,38 @@ article#main-col h1{
     font-weight: bold;
 }
 
-/* KalebShapes */
+/* Sidebar */
+aside#sidebar{
+    float: right;
+    width: 30%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+aside#sidebar h3{
+    padding-left: 1em;
+}
+aside#sidebar li{
+    list-style: none;
+    padding: 1em;
+}
+aside#sidebar a{
+    color: #fff;
+    text-decoration: underline;
+}
+aside#sidebar a:hover{
+    color: rgb(155, 38, 38);
+    font-weight: bold;
+}
+aside#sidebar a:visited{
+    color: #1dbfe8;
+    font-weight: bold;
+}
+aside#sidebar .bulleted-list li{
+    list-style: disc;
+    margin-left: 1em;
+}
+
+/* Services */
 ul#services li{
     list-style: none;
     padding: 20px;
