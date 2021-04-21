@@ -5,8 +5,7 @@ body{
     font: 16px/1.5 Arial, Helvetica, sans-serif;
     padding:0;
     margin:0;
-    background-color: rgb(121, 123, 128);
-    background-color: rgb(78, 167, 112);
+    background-color: rgb(110, 110, 110);
 }
 
 /* Global */
@@ -38,6 +37,7 @@ ul{
     padding: 15px;
     background: #e4e4e4;
     color: rgb(15, 49, 88);
+    color: black;
     margin-top: 10px;
     margin-bottom: 10px;
 }
@@ -48,7 +48,7 @@ header{
     color: ghostwhite;
     padding-top: 30px;
     min-height: 70px;
-    border-bottom: #ffbf36 3px solid;
+    border-bottom: #12135f 3px solid;
 }
 
 header a{
@@ -93,7 +93,7 @@ header a:hover{
     background-size: cover;
     text-align: center;
     color: white;
-    border-bottom: #ffbf36 3px solid;
+    border-bottom: #12135f 3px solid;
 }
 #showcase h1{
     margin-top: 60px;
@@ -181,6 +181,10 @@ aside#sidebar .bulleted-list li{
     list-style: disc;
     margin-left: 1em;
 }
+aside#sidebar .bulleted-list h3{
+    text-align: left;
+    padding-left: 0em;
+}
 
 /* Services */
 ul#services li{
@@ -231,7 +235,7 @@ footer{
     color: white;
     background-color: rgb(15, 49, 88);
     text-align: center;
-    border-top: #ffbf36 3px solid;
+    border-top: #12135f 3px solid;
 }
 
 
