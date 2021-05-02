@@ -1,227 +1,281 @@
-body{
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 14px;
-    line-height: 1.5;
-    font: 14px/1.5 Arial, Helvetica, sans-serif;
-    padding:0;
-    margin:0;
-    background-color: rgb(121, 123, 128);
+@import url('https://fonts.googleapis.com/css2?family=Oswald&family=Playfair+Display:wght@500&display=swap');
+
+:root {
+    --primary-color: #99aec2;
+    --secondary-color: #dbbd8f;
+    --dark-color: #527da5;
+    --light-color: #dbbd8f;
+    --success-color: #5cb85c;
+    --error-color: #d9534f;
 }
 
-/* Global */
-.container{
-    width:80%;
-    margin: auto;
-    overflow: hidden;
-}
-ul{
-    margin:0;
-    padding:0;
-}
-.button_1{
-    height: 38px;
-    background: rosybrown;
-    border: 0;
-    padding-left: 20px;
-    padding-right: 20px;
-    color: white;
-}
-.dark{
-    padding: 15px;
-    background: #35424a;
-    color: #fff;
-    margin-top: 10px;
-    margin-bottom: 10px;
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
-/* Header */
-header{
-    background: rgb(15, 49, 88);
-    color: ghostwhite;
-    padding-top: 30px;
-    min-height: 70px;
-    border-bottom: #1dbfe8 3px solid;
+body {
+    font-family: 'Oswald', sans-serif;
+    font-family: 'Playfair Display', serif;
+    color: black;
+    line-height: 1.6;
 }
 
-header a{
-    color: #fff;
+ul {
+    list-style-type: none;
+
+}
+
+a {
     text-decoration: none;
-    text-transform: uppercase;
-    font-size: 14px;
+    color: black;
 }
 
-header li{
-    float: left;
-    display: inline;
-    padding: 0 20px 0 20px;
+h1, h2 {
+    font-weight: 300;
+    line-height: 1.2;
+    margin: 10px 0;
+
+}
+p {
+    margin: 10px 0;
+}
+img {
+    width: 100%;
+}
+code, pre {
+    background: #333;
+    color: #fff;
+    padding: 10px;
 }
 
-header #branding{
-    float: left;
+/* Navbar */
+.navbar{
+    background-color: var(--primary-color);
+    color: white;
+    height: 70px;
 }
-
-header #branding h1{
-    margin:0;
+.navbar .flex{
+    justify-content: space-between;
 }
-
-header nav{
-    float: right;
-    margin-top: 10px;
+.navbar ul{
+    display: flex;
 }
+.navbar a{
+    color: white;
+    padding: 10px;
+    margin: 0 5px;
 
-header .highlight, header .current a{
-    color:#1dbfe8;
-    font-weight: bold;
 }
-
-header a:hover{
-    color: rgb(155, 38, 38);
+.navbar a:hover{
+    /* border-bottom: 2px #fff solid; */
+    font-weight: bolder;
+}
+.navbar .text-dark{
+    color: var(--dark-color);
     font-weight: bold;
 }
 
 /* Showcase */
-#showcase{
-    min-height: 500px;
-    background: url('../img/blackbodysurf.jpg') no-repeat 0 -70px; 
-    background-size: cover;
-    text-align: center;
+.showcase {
+    height: 850px;
+    background-color: var(--primary-color);
+    /* background-image: linear-gradient(var(--primary-color),var(--secondary-color)); */
+    background-image: url("../images/background.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: center;
     color: white;
+    position: relative;
+    /* border-bottom: 1px solid var(--dark-color); */
 }
-#showcase h1{
-    margin-top: 60px;
-    font-size: 55px;
-    text-shadow: 2px 2px 4px white;
-    margin-bottom: 10px;
-    color: rgb(15, 49, 88);
+.showcase h1 {
+    font-size: 3rem;
 }
-#showcase p{
-    font-size: 20px;
-    text-shadow: 2px 2px 4px white;
-    font-weight: bold;
-    color: rgb(15, 49, 88);
+.showcase h2 {
+    font-size: 2rem;
 }
+.showcase mark{
+    color: var(--dark-color);
+    background-color: transparent;
+}
+.showcase .grid{
+    overflow: visible;
+    grid-template-columns: 3fr 2fr;
+    gap:50px;
+}
+.showcase .grid > *:first-child{
+    grid-column: 1;
+}
+.showcase-text{
+    animation: slideInFromLeft 1s ease-in;
+    grid-column: 1;
+    justify-self: self-start;
+    align-self: flex-start;
+}
+.showcase-text .buttons{
+    justify-self: self-start;
+    align-self: flex-start;
+}
+.showcase-text .buttons a{
+    margin-right: 2em;
+    margin-top: 2em;
+}
+.showcase-text .buttons a:hover{
+    color: var(--dark-color);
+    border-color: var(--dark-color);
+}
+/* .showcase::before, .showcase::after{
+    content: '';
+    position: absolute;
+    height: 100px;
+    bottom: -70px;
+    right: 0;
+    left: 0;
+    background: white;
+    transform: skewY(-3deg);
+} */
 
-
-
-/* Boxes */
-#boxes{
-    margin-top: 20px;
-}
-
-#boxes .box{
-    float: left;
-    text-align: center;
-    width: 30%;
-    padding: 1.5%;
-}
-
-#boxes .box img{
-    width: 90px;
-}
-
-/* Sidebar */
-aside#sidebar{
-    float: right;
-    width: 30%;
-    margin-top: 10px;
-}
-
-/* Main-col */
-article#main-col{
-    float: left;
-    width: 65%;
-}
-article#main-col h1{
-    color: white;
-    text-align: center;
-    font-size: 28px;
-    font-weight: bold;
-}
-
-/* KalebShapes */
-ul#services li{
-    list-style: none;
-    padding: 20px;
-    border: #ccc solid 1px;
-    margin-bottom: 5px;
-    background: #e6e6e6;
-}
-
-/* Newsletter */
-#newsletter{
-    display: grid;
-    box-sizing: border-box;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-column-gap: 1em;
-    justify-items: center;
-    align-items: center;
-
-    color: #fff;
-    background: #35424a;
-}
-#newsletter img{
-    padding: 15px;
-    width: 50px;
-    height: auto;
-}
-#newsletter h1{
-    float: left;
-}
-#newsletter form{
-    float: right;
-    margin-top: 15px;
-}
-#newsletter input[type="email"]{
-    padding: 4px;
-    height: 25px;
-    width: 250px;
-}
-
-/* Footer */
-footer{
-    float: left;
-    width: 100%;
-    padding: 35px;
+/* Featured and Biography */
+.featured, .biography{
+    /* background-image: linear-gradient(var(--primary-color),var(--secondary-color), var(--primary-color)); */
+    background-color: var(--primary-color);
     margin-top: 0px;
-    box-sizing: border-box;
+    margin-bottom: 0px;
+    padding-top: 1em;
+}
+.featured h2, .biography h2{
+    animation: slideInFromTop 1s ease-in;
+    margin-bottom: px;
     color: white;
-    background-color: rgb(15, 49, 88);
+}
+.featured .grid{
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    margin-top: 20px;
+    grid-auto-rows: minmax(50px, auto);
+    row-gap: 3rem;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.featured .grid > *:first-child{
+    grid-column: 1;
+}
+.featured .grid > *:nth-child(2){
+    grid-column: 2 / 4;
+}
+.featured .grid > *:nth-child(3){
+    grid-column: 4;
+    grid-row: 1;
+}
+.featured .flex, .biography .flex{
+    flex-wrap: wrap;
+}
+.featured .card{
+    color: var(--dark-color);
     text-align: center;
-    border-top: #1dbfe8 3px solid;
+    height: 100%;
+    transition: transform 0.2s ease-in;
+}
+.featured .card h4, .biography .card h4{
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+.featured .card img, .biography .card img{
+    border-radius: 10px;
+    justify-self: center;
+    margin-right: 5%;
+    margin-bottom: 3rem;
+}
+.featured .card div, .biography .card div{
+    padding-top: 50px;
+}
+.biography .card{
+    color: var(--dark-color);
+    text-align: left;
+    height: 100%;
+    width: 100%;
+    transition: transform 0.2s ease-in;
+}
+.biography a{
+    color: var(--secondary-color);
+    text-decoration: underline;
 }
 
+/* Footer  */
+.footer{
+    background-color: var(--primary-color);
+}
+.footer .social a{
+    color: #fff;
+    margin: 0 10px;
+}
 
-/* Media Queries */
+/* Animations */
+@keyframes slideInFromLeft {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+@keyframes slideInFromRight {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+@keyframes slideInFromTop {
+    0% {
+        transform: translateY(-200%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+@keyframes slideInFromBottom {
+    0% {
+        transform: translateY(100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+/* Tablets and under */
 @media(max-width: 768px){
-    header #branding,
-    header nav,
-    header nav li,
-    #newsletter h1,
-    #newsletter form,
-    #boxes .box,
-    article#main-col,
-    aside#sidebar{
-        float: none;
+    .grid, .showcase .grid, .featured .grid, biography .grid{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+    }
+    .featured .grid > *:first-child{
+        grid-column: 1;
+        grid-row: 1;
+    }
+    .featured .grid > *:nth-child(2){
+        grid-column: 1;
+        grid-row: 2;
+    }
+    .featured .grid > *:nth-child(3){
+        grid-column: 1;
+        grid-row: 3;
+    }
+    .showcase-text {
+        animation: slideInFromTop 1s ease-in;
         text-align: center;
-        width: 100%;
-    }
-
-    header{
-        padding-bottom: 20px;
-    }
-
-    showcase h1{
         margin-top: 40px;
     }
+    
+}
 
-    #newsletter button{
-        display: block;
-        width: 100%;
-    }
-
-    #newsletter form input[type="email"]{
-        width: 100%;
-        margin-bottom: 5px;
-    }
-
+/* Mobile */
+@media(max-width: 500px){
+    /* About  */
+    
 }
