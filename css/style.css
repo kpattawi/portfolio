@@ -252,6 +252,9 @@ code, pre {
 
 /* Tablets and under */
 @media(max-width: 768px){
+    .navbar .flex{
+        justify-content: space-around;
+    }
     .grid, .showcase .grid, .featured .grid, biography .grid{
         grid-template-columns: 1fr;
         grid-template-rows: 1fr;
@@ -278,8 +281,7 @@ code, pre {
 
 /* Mobile */
 @media(max-width: 500px){
-    .navbar .flex{
-        justify-content: space-around;
+    .navbar{
+        height: 100px;
     }
-    
 }
