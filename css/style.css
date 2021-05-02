@@ -59,7 +59,7 @@ code, pre {
     height: 70px;
 }
 .navbar .flex{
-    justify-content: space-between;
+    justify-content: flex-end;
 }
 .navbar ul{
     display: flex;
@@ -122,8 +122,10 @@ code, pre {
     align-self: flex-start;
 }
 .showcase-text .buttons a{
-    margin-right: 2em;
     margin-top: 2em;
+}
+.showcase-text .buttons > *:first-child{
+    margin-right: 2em;
 }
 .showcase-text .buttons a:hover{
     color: var(--dark-color);
@@ -276,6 +278,8 @@ code, pre {
 
 /* Mobile */
 @media(max-width: 500px){
-    /* About  */
+    .navbar .flex{
+        justify-content: space-around;
+    }
     
 }
