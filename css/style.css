@@ -211,6 +211,9 @@ code, pre {
 .footer{
     background-color: var(--primary-color);
 }
+.footer .grid-3{
+    grid-template-columns: 2fr 1fr 1fr;
+}
 .footer .social a{
     color: #fff;
     margin: 0 10px;
@@ -255,7 +258,7 @@ code, pre {
     .navbar .flex{
         justify-content: space-around;
     }
-    .grid, .showcase .grid, .featured .grid, biography .grid{
+    .grid, .showcase .grid, .featured .grid, .biography .grid{
         grid-template-columns: 1fr;
         grid-template-rows: 1fr;
     }
@@ -275,6 +278,9 @@ code, pre {
         animation: slideInFromTop 1s ease-in;
         text-align: center;
         margin-top: 40px;
+    }
+    .social .grid-3{
+        grid-template-columns: 1fr 1fr 1fr;
     }
     
 }
